@@ -95,3 +95,13 @@ It is private because it is an implementation detail of `RingBuffer`.
 ## UML Class Diagram
 
 ![Ring Buffer Class Diagram](class-diagram.png)
+
+
+## UML Sequence Diagram for write() function
+
+![Ring Buffer Sequence Diagram](sequence-diagram-writer.png)
+
+
+## UML Sequence Diagram for read() function
+
+![Ring Buffer Sequence Diagram](sequence-diagram-reader.png)
