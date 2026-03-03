@@ -1,4 +1,3 @@
-
 # Ring Buffer Implementation
 
 **Name:** Asgar Huseynli  
@@ -90,18 +89,52 @@ It is private because it is an implementation detail of `RingBuffer`.
 - Separation of concerns
 - Generic, type-safe implementation
 
+---
 
+## 3. Diagrams
 
-## UML Class Diagram
+### UML Class Diagram
 
 ![Ring Buffer Class Diagram](class-diagram.png)
 
+---
 
-## UML Sequence Diagram for write() function
+### UML Sequence Diagram for write() Function
 
-![Ring Buffer Sequence Diagram](sequence-diagram-writer.png)
+![Ring Buffer Sequence Diagram - Write](sequence-diagram-writer.png)
 
+---
 
-## UML Sequence Diagram for read() function
+### UML Sequence Diagram for read() Function
 
-![Ring Buffer Sequence Diagram](sequence-diagram-reader.png)
+![Ring Buffer Sequence Diagram - Read](sequence-diagram-reader.png)
+
+---
+
+## 4. How to Run the Project
+
+### Requirements
+
+- Java 11 or higher
+- Any Java IDE (IntelliJ IDEA, Eclipse, VS Code)  
+  or command line terminal
+
+---
+
+### Option 1 – Using an IDE
+
+1. Open the project in your IDE.
+2. Locate `Main.java`.
+3. Run the `Main` class.
+4. View the output in the console.
+
+---
+
+### Option 2 – Using Command Line
+
+1. Navigate to the directory containing the `.java` files.
+
+2. Compile the project:
+
+```bash
+javac RingBuffer.java Main.java
