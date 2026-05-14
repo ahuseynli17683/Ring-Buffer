@@ -6,10 +6,37 @@ public class RingBufferTest {
 
     @Test
     void shouldReturnCorrectCapacity() {
-
         RingBuffer<String> buffer =
                 new RingBuffer<>(3);
-
         assertEquals(3, buffer.capacity());
+    }
+    @Test
+    void testInvalidCapacity() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> new RingBuffer<String>(0)
+        );
+    }
+    @Test
+    void testEmptyBuffer() {
+        RingBuffer<String> buffer =
+                new RingBuffer<>(3);
+        RingBuffer.Reader<String> reader =
+                buffer.createReader();
+        assertNull(reader.read());
+    }
+    @Test
+    void testWriteAndRead() {
+        RingBuffer<String> buffer =
+                new RingBuffer<>(3);
+        RingBuffer.Writer<String> writer =
+                buffer.createWriter();
+        RingBuffer.Reader<String> reader =
+                buffer.createReader();
+        writer.write("A");
+        RingBuffer.ReadResult<String> result =
+                reader.read();
+        assertNotNull(result);
+        assertEquals("A", result.getItem());
     }
 }
